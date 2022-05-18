@@ -79,9 +79,9 @@ public:
    * Parameter: - int16_t dat         parameter for the command
    * Parameter:- uint8_t *Send_buf    (optional) Send buffer array
    * -------------------------------------------------------------------------- */
-  void sendCommand(int8_t command, int16_t dat, int8_t *Send_buf);
-  void sendCommand(int8_t command, int16_t dat);
-  void sendCommand(int8_t command);
+  void sendCommand(uint8_t command, uint16_t dat, uint8_t *Send_buf);
+  void sendCommand(uint8_t command, uint16_t dat);
+  void sendCommand(uint8_t command);
 
   /* --------------------------------------------------------------------------
    * Function: playFromFolder. Plays file from folder
@@ -89,11 +89,11 @@ public:
    * Parameter:- uint8_t song_number  Numero Cancion
    * Parameter:- uint8_t *Send_buf    (optional) Send buffer array
    *  -------------------------------------------------------------------------- */
-  void playFromFolder(uint8_t folder, uint8_t song_number, int8_t *Send_buf);
+  void playFromFolder(uint8_t folder, uint8_t song_number, uint8_t *Send_buf);
   void playFromFolder(uint8_t folder, uint8_t song_number);
 
 
-  void setVolume(int16_t volume); // 0-30
+  void setVolume(uint8_t volume); // 0-30
   void pause();
   void resume();
   void stop();

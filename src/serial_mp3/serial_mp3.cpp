@@ -24,7 +24,7 @@ bool SerialMp3::init(Stream& inputStream)
  * Parameter: - int16_t dat         parameter for the command
  * Parameter:- uint8_t *Send_buf    (optional) Send buffer array
  * -------------------------------------------------------------------------- */
-void SerialMp3::sendCommand(int8_t command, int16_t dat, int8_t *Send_buf)
+void SerialMp3::sendCommand(uint8_t command, uint16_t dat, uint8_t *Send_buf)
 {
   delay(20);
   Send_buf[0] = 0x7e;               //
@@ -46,7 +46,7 @@ void SerialMp3::sendCommand(int8_t command, int16_t dat, int8_t *Send_buf)
 }
 
 
-void SerialMp3::sendCommand(int8_t command, int16_t dat)
+void SerialMp3::sendCommand(uint8_t command, uint16_t dat)
 {
   uint8_t send_buffer[8];
 
@@ -54,7 +54,7 @@ void SerialMp3::sendCommand(int8_t command, int16_t dat)
 }
 
 
-void SerialMp3::sendCommand(int8_t command)
+void SerialMp3::sendCommand(uint8_t command)
 {
   this->sendCommand(command, 0);
 }
@@ -66,7 +66,7 @@ void SerialMp3::sendCommand(int8_t command)
  * Parameter:- uint8_t song_number  Numero Cancion
  * Parameter:- uint8_t *Send_buf    (optional) Send buffer array
  *  -------------------------------------------------------------------------- */
-void SerialMp3::playFromFolder(uint8_t folder, uint8_t song_number, int8_t *Send_buf)
+void SerialMp3::playFromFolder(uint8_t folder, uint8_t song_number, uint8_t *Send_buf)
 {
   uint16_t dat = 0;
 
@@ -87,7 +87,7 @@ void SerialMp3::playFromFolder(uint8_t folder, uint8_t song_number)
 /* --------------------------------------------------------------------------
  *  UTILITY FUNCTIONS
  *  -------------------------------------------------------------------------- */
-void SerialMp3::setVolume(int16_t volume)
+void SerialMp3::setVolume(uint8_t volume)
 {
   if (volume > 30)
   {
