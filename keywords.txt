@@ -1,0 +1,28 @@
+#######################################
+# Syntax Coloring Map For Timer
+#######################################
+
+#######################################
+# SerialMp3
+#######################################
+
+# Datatypes (KEYWORD1)
+SerialMp3	KEYWORD1
+
+# Methods and Functions (KEYWORD2)
+sendCommand	KEYWORD2
+playFromFolder	KEYWORD2
+setVolume	KEYWORD2
+pause	KEYWORD2
+resume	KEYWORD2
+stop	KEYWORD2
+decodeMP3Answer	KEYWORD2
+sanswer	KEYWORD2
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
+#######################################
+# Constants (LITERAL1)
+#######################################
